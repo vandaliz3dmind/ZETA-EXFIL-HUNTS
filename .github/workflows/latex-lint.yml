@@ -1,0 +1,26 @@
+name: Lint Zeta Exfiltration LaTeX
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up TeX Live
+        uses: teatimeguest/setup-texlive@v3
+        with:
+          packages: chktex lacheck
+
+      - name: Run chktex Linter
+        run: chktex -v zeta_exfiltration.tex
+
+      - name: Run lacheck Linter
+        run: lacheck zeta_exfiltration.tex
