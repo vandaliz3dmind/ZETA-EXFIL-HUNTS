@@ -1,0 +1,29 @@
+name: Build Zeta Exfiltration PDF
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up TeX Live
+        uses: teatimeguest/setup-texlive@v3
+        with:
+          packages: amsmath listings hyperref
+
+      - name: Compile LaTeX to PDF
+        run: pdflatex -interaction=nonstopmode zeta_exfiltration.tex
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zeta-exfiltration-pdf
+          path: zeta_exfiltration.pdf
