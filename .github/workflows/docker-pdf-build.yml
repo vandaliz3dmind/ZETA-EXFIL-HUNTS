@@ -1,0 +1,25 @@
+name: Docker Build Zeta Exfiltration PDF
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build PDF with Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/workdir -w /workdir texlive/texlive:latest pdflatex -interaction=nonstopmode zeta_exfiltration.tex
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zeta-exfiltration-pdf-docker
+          path: zeta_exfiltration.pdf
