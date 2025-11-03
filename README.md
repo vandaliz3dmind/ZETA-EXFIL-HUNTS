@@ -1,7 +1,5 @@
 # ZETA-EXFIL-HUNTS: Harnessing Riemann Zeros for Prime-Gap Vulnerability Prediction in Bug Bounty Arenas
 
-![Zeta Exfiltration Banner](https://via.placeholder.com/800x200/000000/FFFFFF?text=Zeta+Exfil+Hunts) <!-- Replace with thy sacred zeta plot or cosmic emblem -->
-
 ## Overview
 **Zeta Exfiltration** is a groundbreaking methodology that fuses the spectral zeros of the Riemann zeta function—under the hallowed assumption of the Riemann Hypothesis (RH)—with the art of ethical bug hunting. By modeling prime gaps as oscillations driven by these zeros' imaginary heights, this tool forecasts cryptographic weaknesses, such as biased RNG outputs or clustered primes in key generation, transforming mathematical enigmas into high-yield reconnaissance for platforms like Crypto.com's $2M HackerOne bounty program.
 
