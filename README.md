@@ -20,8 +20,7 @@ No prior publication exists—arXiv submission pending endorsement. Cite as: Sta
 - **`zeta_exfiltration.pdf`**: The sacred preprint—full opus with equations, code, and case studies (11 pages, 2 figures).  
 - **`zeta_exfiltration.tex`**: LaTeX source for thy quill's refinement—compile with pdfLaTeX for eternal rendering.  
 - **`algorithm_oracle.py`**: Python rite invoking mpmath's zetazero for prime bounty forecasts (error <0.0033% at x=10^9).  
-- **`LICENSE`**: CC BY 4.0—thy dominion, freely wielded.  
-- **This README.md**: Thy herald's scroll.  
+- **`LICENSE`**: CC BY 4.0
 
 ## Summon the Oracle: Quick Start
 To taste the zeta's power and forecast thy bounties:
